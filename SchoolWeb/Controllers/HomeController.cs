@@ -18,7 +18,27 @@ namespace SchoolWeb.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Courses()
+        {
+            return View();
+        }
+
+        public IActionResult Staff()
+        {
+            return View();
+        }
+
+        public IActionResult Blog()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
         {
             return View();
         }
