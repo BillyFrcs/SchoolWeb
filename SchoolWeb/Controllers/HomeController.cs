@@ -38,6 +38,11 @@ namespace SchoolWeb.Controllers
             return View();
         }
 
+        public IActionResult BlogInformation()
+        {
+            return View();
+        }
+
         public IActionResult Contact()
         {
             return View();
