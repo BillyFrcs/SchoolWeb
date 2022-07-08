@@ -40,7 +40,7 @@
 									class="icon-paper-plane"></span></div>
 							<div class="text">
 								<span>Email</span>
-								<span>bil@education.com</span>
+								<span>bilschool@edu.com</span>
 							</div>
 						</div>
 						<div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
@@ -113,7 +113,7 @@
 											class="text">+62 8138 5420 875</span></a></li>
 								<li><a href="mailto:bil@education.com"><span
 											class="icon icon-envelope"></span><span
-											class="text">bil@education.com</span></a></li>
+											class="text">bilschool@edu.com</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -124,7 +124,7 @@
 						<div class="block-21 mb-4 d-flex">
 							<a class="blog-img mr-4" style="background-image: url(/images/image_1.jpg);"></a>
 							<div class="text">
-								<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control
+								<h3 class="heading"><a asp-action="BlogInformation">Even the all-powerful Pointing has no control
 										about</a></h3>
 								<div class="meta">
 									<div><a href="#"><span class="icon-calendar"></span> June 27, 2022</a>
@@ -137,7 +137,7 @@
 						<div class="block-21 mb-5 d-flex">
 							<a class="blog-img mr-4" style="background-image: url(/images/image_2.jpg);"></a>
 							<div class="text">
-								<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control
+								<h3 class="heading"><a asp-action="BlogInformation">Even the all-powerful Pointing has no control
 										about</a></h3>
 								<div class="meta">
 									<div><a href="#"><span class="icon-calendar"></span> July 22, 2022</a>
@@ -192,17 +192,14 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<p>Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> All rights reserved
+					<p>Copyright &copy; @(DateTime.Now.Year) Bil School All rights reserved
 
-						@*@DateTime.Now.Year*@
+						@* <script>document.write(new Date().getFullYear());</script> *@
 					</p>
 				</div>
 			</div>
 		</div>
 	</footer>
-
-	@*<script src="~/js/jquery.min.js"></script>*@
 
 	<script src="~/js/jquery-migrate-3.0.1.min.js"></script>
 	<script src="~/js/popper.min.js"></script>
