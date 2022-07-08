@@ -16,3 +16,25 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.text-orange {
+  color: #fd5f00;
+}
+
+.text-orange:hover {
+  color: #fff;
+}
+
+.button-outline-primary-override {
+  outline-color: #fd5f00;
+}
+
+.button-outline-primary-override:hover,
+.button-outline-primary-override:active,
+.button-outline-primary-override:focus,
+.button-outline-primary-override:visited {
+  background-color: #fd5f00 !important;
+  border-color: #fd5f00 !important;
+  background-image: none !important;
+  border: 0 !important;
+}
