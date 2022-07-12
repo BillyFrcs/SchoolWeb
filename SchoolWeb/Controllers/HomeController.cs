@@ -49,7 +49,7 @@ namespace SchoolWeb.Controllers
         }
         
         [Route("/Home/Error/{code:int}")]
-        public IActionResult Error(in int code)
+        public IActionResult Error(int code)
         {
             return View(new ErrorViewModel
             {
