@@ -10,7 +10,7 @@ namespace SchoolWeb.Controllers
 
         public HomeController(ILogger<HomeController> logger)
         {
-            _logger = logger;
+            this._logger = logger;
         }
 
         public IActionResult Index()
@@ -46,6 +46,16 @@ namespace SchoolWeb.Controllers
         public IActionResult Contact()
         {
             return View();
+        }
+        
+        [Route("/Home/Error/{code:int}")]
+        public IActionResult Error(in int code)
+        {
+            return View(new ErrorViewModel
+            {
+                RequestId = "Page Not Found",
+                ErrorMessage = $"Error Code {code}"
+            }); 
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
