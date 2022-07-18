@@ -16,11 +16,13 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Collection of contact messages
+// Collection to store the reference into the database
 let contactMessage = firebase.database().ref("user-messages");
+let subscribeEmail = firebase.database().ref("user-subscribe-email");
 
 // Firebase Database integration 
 document.querySelector(".contact-form").addEventListener("submit", SubmitContactForm);
+document.querySelector(".subscribe-form").addEventListener("submit", SubmitSubscribeForm);
 
 // Submit the contact form
 function SubmitContactForm(event)
@@ -34,11 +36,11 @@ function SubmitContactForm(event)
     const message = document.querySelector(".message").value;
 
     if (name !== "" && email !== "" && subject !== "" && message !== "") {
-        console.log(name, email, subject, message); // DEBUG
-
         SaveContactMessage(name, email, subject, message);
 
         RefreshContactForm();
+
+        console.log(name, email, subject, message); // DEBUG
     }
     else {
         console.log("The form is still empty!"); // DEBUG
@@ -51,10 +53,10 @@ function SaveContactMessage(name, email, subject, message)
     const newContactMessage = contactMessage.push();
 
     newContactMessage.set({
-        name: name,
-        email: email,
-        subject: subject,
-        message: message
+        Name: name,
+        Email: email,
+        Subject: subject,
+        Message: message
     });
 }
 
@@ -62,4 +64,40 @@ function SaveContactMessage(name, email, subject, message)
 function RefreshContactForm()
 {
     document.querySelector(".contact-form").reset();
+}
+
+// Submit the subscribe form
+function SubmitSubscribeForm(event)
+{
+    event.preventDefault();
+
+    // Get the input value
+    const email = document.querySelector(".email").value;
+
+    if (email !== "") {
+        SaveSubscribeForm(email);
+
+        RefreshSubscribeForm();
+
+        console.log(email); // DEBUG
+    }
+    else {
+        console.log("The form is still empty!"); // DEBUG
+    }
+}
+
+// Save the subscribe email to the database
+function SaveSubscribeForm(email)
+{
+    const newSubscribeEmail = subscribeEmail.push();
+    
+    newSubscribeEmail.set({
+        Email: email
+    });
+}
+
+// Refresh the subscribe form
+function RefreshSubscribeForm()
+{
+    document.querySelector(".subscribe-form").reset();
 }

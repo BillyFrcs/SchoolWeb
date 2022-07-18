@@ -171,9 +171,9 @@
 				<div class="col-md-6 col-lg-3">
 					<div class="ftco-footer-widget mb-5">
 						<h2 class="ftco-heading-2">Subscribe Us!</h2>
-						<form action="#" class="subscribe-form">
+						<form class="subscribe-form" method="post">
 							<div class="form-group">
-								<input type="text" class="form-control mb-2 text-center" placeholder="Email"
+								<input type="text" class="form-control mb-2 text-center email" placeholder="Email"
 									required>
 								<input type="submit" value="Subscribe" class="form-control submit px-3">
 							</div>
@@ -201,7 +201,9 @@
 		</div>
 	</footer>
 
-	<script src="~/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="~/js/App.js" type="module"></script>
+    <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
 	<script src="~/js/popper.min.js"></script>
 	<script src="~/js/bootstrap.min.js"></script>
 	<script src="~/js/jquery.easing.1.3.js"></script>
