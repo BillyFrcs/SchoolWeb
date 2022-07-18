@@ -74,18 +74,18 @@
     <div class="container">
       <div class="row d-flex align-items-stretch no-gutters justify-content-center pb-5">
         <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
-          <form action="#">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name" required>
+          <form class="contact-form">
+            <div class="form-group" method="post">
+              <input type="text" class="form-control name" placeholder="Your Name" required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Email" required>
+              <input type="text" class="form-control email" placeholder="Your Email" required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Subject" required>
+              <input type="text" class="form-control subject" placeholder="Subject" required>
             </div>
             <div class="form-group">
-              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+              <textarea name="" id="" cols="30" rows="7" class="form-control message" placeholder="Message" required></textarea>
             </div>
             <div class="form-group">
               <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
@@ -103,6 +103,8 @@
         stroke="#F96D00" />
     </svg></div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script src="~/js/App.js" type="module"></script>
   <script src="~/js/jquery.min.js"></script>
   <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
   <script src="~/js/popper.min.js"></script>
