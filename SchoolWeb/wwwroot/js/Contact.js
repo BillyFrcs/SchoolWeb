@@ -17,8 +17,8 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // Collection to store the reference into the database
-let contactMessage = firebase.database().ref("user-messages");
-let subscribeEmail = firebase.database().ref("user-subscribe-email");
+let contactMessageForm = firebase.database().ref("user-contact-message");
+let emailSubscribeForm = firebase.database().ref("user-email-subscribe");
 
 // Firebase Database integration 
 document.querySelector(".contact-form").addEventListener("submit", SubmitContactForm);
@@ -50,7 +50,7 @@ function SubmitContactForm(event)
 // Save the contact message to the database
 function SaveContactMessage(name, email, subject, message)
 {
-    const newContactMessage = contactMessage.push();
+    const newContactMessage = contactMessageForm.push();
 
     newContactMessage.set({
         Name: name,
@@ -72,7 +72,7 @@ function SubmitSubscribeForm(event)
     event.preventDefault();
 
     // Get the input value
-    const email = document.querySelector(".email").value;
+    const email = document.querySelector(".email-subscribe").value;
 
     if (email !== "") {
         SaveSubscribeForm(email);
@@ -89,9 +89,9 @@ function SubmitSubscribeForm(event)
 // Save the subscribe email to the database
 function SaveSubscribeForm(email)
 {
-    const newSubscribeEmail = subscribeEmail.push();
+    const newEmailSubscribe = emailSubscribeForm.push();
     
-    newSubscribeEmail.set({
+    newEmailSubscribe.set({
         Email: email
     });
 }
