@@ -38,3 +38,10 @@ body {
   background-image: none !important;
   border: 0 !important;
 }
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  display: none;
+}
