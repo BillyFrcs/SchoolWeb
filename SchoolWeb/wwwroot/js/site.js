@@ -7,6 +7,15 @@ $(".nav-link").on("click", (event) => {
     $(event.target).parent().addClass('active');
 });
 
+// Auto remove alert message
+$(document).ready(function () {
+    window.setTimeout(function() {
+        $(".alert").fadeTo(1000, 0).slideUp(1000, function(){
+            $(this).remove();
+        });
+    }, 5000);
+});
+
 //Get the button
 let scrollButton = document.getElementById("btn-back-to-top");
 
