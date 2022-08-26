@@ -11,7 +11,11 @@ const alert = (message, type) => {
         '</div>'
     ].join('');
 
-    alertPlaceholder.append(wrapper);
+    const email = document.querySelector(".email-subscribe").value;
+
+    if (email !== "") {
+        alertPlaceholder.append(wrapper);
+    }
 }
 
 const alertTrigger = document.getElementById('alert-subscribe-btn');

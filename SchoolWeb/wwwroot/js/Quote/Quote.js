@@ -80,7 +80,16 @@ const alert = (message, type) => {
         '</div>'
     ].join('');
 
-    alertPlaceholder.append(wrapper);
+    const firstName = document.querySelector(".first-name").value;
+    const lastName = document.querySelector(".last-name").value;
+    let course = document.getElementById('course');
+    let selectedCourse = course.options[course.selectedIndex].text;
+    const phoneNumber = document.querySelector(".phone-number").value;
+    const quoteMessage = document.querySelector(".quote-message").value;
+
+    if (firstName !== "" && lastName !== "" && selectedCourse !== "" && phoneNumber !== "" && quoteMessage !== "") {
+        alertPlaceholder.append(wrapper);
+    }
 }
 
 const alertTrigger = document.getElementById('alert-quote-btn');

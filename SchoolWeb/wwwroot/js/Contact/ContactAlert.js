@@ -11,7 +11,14 @@ const alert = (message, type) => {
         '</div>'
     ].join('');
 
-    alertPlaceholder.append(wrapper);
+    const name = document.querySelector(".name").value;
+    const email = document.querySelector(".email").value;
+    const subject = document.querySelector(".subject").value;
+    const userMessage = document.querySelector(".message").value;
+
+    if (name !== "" && email !== "" && subject !== "" && userMessage !== "") {
+        alertPlaceholder.append(wrapper);
+    }
 }
 
 const alertTrigger = document.getElementById('alert-contact-btn');
